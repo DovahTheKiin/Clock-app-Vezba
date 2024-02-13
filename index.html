@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock App Vezba</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="shadow-cover"></div>
+    <div class="container">
+        <div class="animation-div">
+            <div class="quote">
+                <div class="quote-text">
+                    <p class="quote-p">
+                        “The science of operations, as derived from mathematics more especially, 
+                        is a science of itself, and has its own abstract truth and value.”
+                    </p>
+                    <h5 class="quote-person">Ada Lovelace</h5>
+                </div>
+                <button class="refresh-quote-btn">
+                    <img src="assets/desktop/icon-refresh.svg" alt="Refresh Icon" class="refresh-icon">
+                </button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="time-options">
+                <div class="clock">
+                    <div class="clock-daytime">
+                        <img src="assets/desktop/icon-sun.svg" alt="Sun Icon" class="sun-icon">
+                        <h4 class="time-title">GOOD MORNING</h4>
+                    </div>
+                    <div class="time-timezone">
+                        <h1 class="time">23:14</h1>
+                        <p class="time-zone">BST</p>
+                    </div>
+                    <h3 class="city-country">IN LONDON, UK</h3>
+                </div>
+                <button class="more-less">
+                    <span class="button-text">MORE</span> 
+                    <img src="assets/desktop/icon-arrow-up.svg" alt="Arrow Icon" class="arrow-icon">
+                </button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="left-side">
+                <div class="option">
+                    <h6 class="options-title">CURRENT TIMEZONE</h6>
+                    <h2 class="options-main current-timezone">Europe/London</h2>
+                </div>
+                <div class="option">
+                    <h6 class="options-title">Day of the year</h6>
+                    <h2 class="options-main day-of-the-year">295</h2>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="option">
+                    <h6 class="options-title">Day of the week</h6>
+                    <h2 class="options-main day-of-the-week">5</h2>
+                </div>
+                <div class="option">
+                    <h6 class="options-title">Week number</h6>
+                    <h2 class="options-main week-number">42</h2>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
