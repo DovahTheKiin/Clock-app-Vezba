@@ -159,7 +159,7 @@ quoteButton.addEventListener('click', () => {
     quoteButton.classList.remove("refreshAnimation");
 })
 document.addEventListener('DOMContentLoaded', () => {
-    //cityAndCountry();
+    cityAndCountry();
     changeTheme();
 })
 
