@@ -54,8 +54,9 @@ button {
     left: 0;
     right: 0;
     background-color: var(--black-900);
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: -10;
+    background-blend-mode: multiply;
 }
 .container {
     width: 100%;
@@ -159,51 +160,8 @@ button {
     height: 0;
     padding: 0rem 2rem;
     overflow: hidden;
+    backdrop-filter: blur(5px);
 }
-/* .main::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    right:0;
-    bottom:0;
-    left:0;
-    width: 100%;
-    filter: blur(44px);
-    background-color: rgba(0, 0, 0, 1);
-    opacity: 0.5;
-    z-index: -2;
-} */
-/* .main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: -1;
-    opacity: 0.4;
-    filter: blur(40.17px);
-} */
-/* .stroke {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #979797;
-    filter: blur(40.77px);
-    z-index: -1;
-} */
-/* .white-stroke {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: -5;
-} */
 .left-side, .right-side {
     display: grid;
     row-gap: 1rem;

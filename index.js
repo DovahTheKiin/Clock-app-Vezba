@@ -10,14 +10,23 @@ const mainTime = document.querySelector(".time")
 const body = document.body;
 const sunIcon = document.querySelector(".sun-icon")
 const quoteText = document.querySelector(".quote-text")
+const buttonText = document.querySelector(".button-text")
 
 const mediaQuery = window.matchMedia('(min-width: 700px)')
 
+let IsPanelOpen = false;
 moreLess.addEventListener('click', () => {
     header.classList.toggle("header-height")
     main.classList.toggle("main-height")
     arrowIcon.classList.toggle("arrow-animation")
     animationDiv.classList.toggle("quote-animation")
+    if(IsPanelOpen) {
+        IsPanelOpen = false;
+        buttonText.innerText = "MORE";
+    } else {
+        IsPanelOpen = true;
+        buttonText.innerText = "LESS";
+    }
 })
 
 async function randomQuote() {
