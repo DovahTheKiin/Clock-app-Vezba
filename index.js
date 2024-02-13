@@ -98,6 +98,8 @@ async function time() {
     dayOfTheWeek.innerText =`${data.day_of_week}`;
     weekNumber.innerText =`${data.week_number}`;
 
+    mainF();
+
 }
 let timeOfDay;
 let nightTime = false;
@@ -162,6 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cityAndCountry();
     changeTheme();
 })
+function mainF() {
+    changeTheme();
+}
 
 window.addEventListener("resize", () => {
     periodOfTheDay();
