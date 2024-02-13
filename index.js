@@ -116,22 +116,22 @@ function changeTheme() {
 }
 
 function periodOfTheDay() {
-    if(timeOfDay > 5 && timeOfDay < 12 && mediaQuery.matches) {
+    if(timeOfDay >= 5 && timeOfDay < 12 && mediaQuery.matches) {
         timeTitle.innerText = "GOOD MORNING, IT’S CURRENTLY"; 
     } else if(timeOfDay > 5 && timeOfDay < 12 && !mediaQuery.matches) {
         timeTitle.innerText = "GOOD MORNING";
     }
-    if(timeOfDay > 12 && timeOfDay < 18 && mediaQuery.matches) {
+    if(timeOfDay >= 12 && timeOfDay < 18 && mediaQuery.matches) {
         timeTitle.innerText = "GOOD AFTERNOON, IT’S CURRENTLY"; 
     } else if(timeOfDay > 12 && timeOfDay < 18 && !mediaQuery.matches) {
         timeTitle.innerText = "GOOD AFTERNOON";
     }
-    if(timeOfDay > 18 && timeOfDay < 24 && mediaQuery.matches) {
+    if(timeOfDay >= 18 && timeOfDay < 24 && mediaQuery.matches) {
         timeTitle.innerText = "GOOD EVENING, IT’S CURRENTLY"; 
     } else if(timeOfDay > 18 && timeOfDay < 24 && !mediaQuery.matches) {
         timeTitle.innerText = "GOOD EVENING";
     }
-    if(timeOfDay > 0 && timeOfDay < 5 && mediaQuery.matches) {
+    if(timeOfDay >= 0 && timeOfDay < 5 && mediaQuery.matches) {
         timeTitle.innerText = "GOOD EVENING, IT’S CURRENTLY"; 
     } else if(timeOfDay > 0 && timeOfDay < 5 && !mediaQuery.matches) {
         timeTitle.innerText = "GOOD EVENING";
@@ -159,7 +159,7 @@ quoteButton.addEventListener('click', () => {
     quoteButton.classList.remove("refreshAnimation");
 })
 document.addEventListener('DOMContentLoaded', () => {
-    cityAndCountry();
+    //cityAndCountry();
     changeTheme();
 })
 
