@@ -54,7 +54,7 @@ async function cityAndCountry() {
     const response = await fetch(`https://freeipapi.com/api/json`);
     const data = await response.json();
 
-    console.log(data)
+    // console.log(data)
 
     city = `${data.cityName}`;
     continent = `${data.continent}`;
