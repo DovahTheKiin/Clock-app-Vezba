@@ -73,6 +73,7 @@ async function cityAndCountry() {
 
     cityCountry.innerText = `IN ${city}, ${data.countryCode}`;
 
+    console.log("First finished");
     time();
 
 }
@@ -98,7 +99,9 @@ async function time() {
     dayOfTheWeek.innerText =`${data.day_of_week}`;
     weekNumber.innerText =`${data.week_number}`;
 
+    console.log("Second finished");
     mainF();
+
 
 }
 let timeOfDay;
@@ -138,9 +141,12 @@ function periodOfTheDay() {
     } else if(timeOfDay > 0 && timeOfDay < 5 && !mediaQuery.matches) {
         timeTitle.innerText = "GOOD EVENING";
     }
+    console.log("Fourth finished");
 }
 
 function resizePicture() {
+    const loadingDiv = document.querySelector(".loading-div")
+    
     const mediaQueryMobile = window.matchMedia('(max-width: 700px)')
     const mediaQueryTablet = window.matchMedia('(min-width: 700px)')
     const mediaQueryDesktop = window.matchMedia('(min-width: 1150px)')
@@ -153,6 +159,7 @@ function resizePicture() {
     if (mediaQueryDesktop.matches) {
         body.style.backgroundImage = "url('../assets/desktop/bg-image-nighttime.jpg')";
     }
+    loadingDiv.classList.add("hidden");
 }
 
 quoteButton.addEventListener('click', () => {
@@ -162,9 +169,10 @@ quoteButton.addEventListener('click', () => {
 })
 document.addEventListener('DOMContentLoaded', () => {
     cityAndCountry();
-    changeTheme();
+    //loading();
 })
 function mainF() {
+    console.log("Third finished");
     changeTheme();
 }
 
@@ -174,6 +182,22 @@ window.addEventListener("resize", () => {
         resizePicture();
     }
 })
+
+// async function fetchDatas(){
+//     loading(true);
+//     await cityAndCountry();
+//     await time();
+//     loading(false);
+// }
+
+// function loading(status){
+//     if(status){
+//         console.log("loading");
+//     } else{
+//        console.log("loaded");
+//        cityAndCountry();
+//     }
+// }
 
 
 
