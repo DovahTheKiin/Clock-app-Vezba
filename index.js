@@ -11,6 +11,7 @@ const body = document.body;
 const sunIcon = document.querySelector(".sun-icon")
 const quoteText = document.querySelector(".quote-text")
 const buttonText = document.querySelector(".button-text")
+const loadingDiv = document.querySelector(".loading-div")
 
 const mediaQuery = window.matchMedia('(min-width: 700px)')
 
@@ -142,10 +143,10 @@ function periodOfTheDay() {
         timeTitle.innerText = "GOOD EVENING";
     }
     console.log("Fourth finished");
+    loadingDiv.classList.add("hidden");
 }
 
 function resizePicture() {
-    const loadingDiv = document.querySelector(".loading-div")
     
     const mediaQueryMobile = window.matchMedia('(max-width: 700px)')
     const mediaQueryTablet = window.matchMedia('(min-width: 700px)')
